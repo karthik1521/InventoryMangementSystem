@@ -1,0 +1,41 @@
+
+<div class="row">
+    
+    <div class="col-2">
+
+    </div>
+    <div class="col-8">
+        <h3>All Products</h3>
+        <table class="table table-stripe hover">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>product quantity</th>
+                    <th>Price</th>
+                    <th>product category</th>
+                    <th>Supplier</th>
+                    <th>Dateofpacking</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of customer">
+                    <td>{{c.pname}}</td>
+                    <td>{{c.pquantity}}</td>
+                    <td>{{c.price}}</td>
+                    <td>{{c.category}}</td>
+                    <td>{{c.supplier}}</td>
+                    <td>{{c.Dateofpacking}}</td>
+                    <td>
+                        <a class="btn btn-success" routerLink="/edit/{{c.pid}}">Edit</a> || 
+                        <button class="btn btn-danger" (click)="delCustome(c.pid)">Delete</button>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-2">
+        
+    </div>
+</div>
+
